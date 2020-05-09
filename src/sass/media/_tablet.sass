@@ -1,0 +1,27 @@
+@include respond-below(lg)
+	.site
+		#page-wrapper
+			.main-container
+					.main-grid
+						.main-content
+							#meet-the-team
+								.team
+									.member
+										&.active
+											.front-row
+												display: flex
+												margin-bottom: 1em
+												img
+													margin-right: 1em
+			#footer-wrapper
+				.footer-nav
+					padding-top: 30px
+					grid-template-columns: 1fr
+					grid-template-rows: repeat(4, minmax(300px, auto))
+					grid-template-areas: "links" "location" "contact" "legal"
+					.footer-sidebar
+						&#links
+							ul.menu
+								width: 100%
+								flex-direction: row
+								justify-content: space-around

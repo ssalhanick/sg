@@ -1,0 +1,79 @@
+@include respond-below(md)
+	body
+		.site
+			#page-wrapper
+				#header
+					z-index: 999
+					.row
+						.title-bar-right
+							.title-bar
+								nav
+									.menu
+										.menu-item
+											&:last-of-type
+												&:not(.is-dropdown-submenu-item)
+													margin-left: unset
+				.main-container
+					.main-grid
+						margin-top: 10px
+						.main-content
+							margin: 0
+							padding: 24px 16px
+							#membership-perks
+								#individual-perks,
+								#corporate-perks
+									grid-template-columns: 1fr
+							#meet-the-team
+								.team
+									grid-template-columns: repeat(2, 1fr)
+									.member
+										.front-row
+											padding-right: 0
+										&.active
+											flex-flow: column wrap
+											.front-row
+												flex-flow: column wrap
+
+
+										
+
+					&#fp
+						.main-grid
+							margin-top: 10px
+							.main-content
+								margin: 0
+								.primary
+									#calendar
+										.tribe-this-week-widget-wrapper
+											.tribe-this-week-widget-weekday-wrapper
+												grid-template-columns: 1fr
+												width: 100%
+									#enroll
+										select
+											&.mobileClassNav
+												display: block
+										ul
+											&.nav
+												display: none
+											&.content
+												li
+													section
+														display: grid
+														grid-template-columns: repeat(2, 1fr)
+														grid-gap: 16px
+														.class-fp
+															grid-template-columns: 1fr
+				#footer-wrapper
+					.footer-nav
+						padding-top: 30px
+						grid-template-columns: 1fr
+						grid-template-rows: repeat(4, minmax(300px, auto))
+						grid-template-areas: "links" "location" "contact" "legal"
+						.footer-sidebar
+							&#links
+								ul.menu
+									width: 100%
+									flex-direction: column
+									align-items: center
+							&:last-of-type
+								margin-top: 2em

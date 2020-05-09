@@ -1,0 +1,68 @@
+@mixin btn()
+    text-align: center
+    display: inline-block
+    min-width: 102px
+    width: auto
+    height: 34px
+    letter-spacing: 0.5px
+    line-height: 15px
+    background-color: transparent
+    color: $dirk
+    border-radius: 0px
+    padding: 10px 8px
+    font:
+        weight: bold
+        size: 15px
+    text-transform: uppercase
+    margin: 6px
+    position: relative
+    transition: transform 0.3s ease-in-out
+    &:hover
+        transform: translate(2px,2px)
+        font-weight: bold
+        color: $sg-blue
+    &::before, &::after
+        content: ''
+        border: 1px solid $sg-yellow
+        position: absolute
+        width: 96%
+        left: 0
+        top: 0
+        height: 91%
+        transform: translate(0,0)
+        transition: transform 0.4s ease-in-out
+    &::before
+        border-color: $sg-blue
+        &:hover
+    &::after
+        border-color: $sg-yellow
+        transform: translate(2px,2px)
+        &:hover
+            transform: translate(-2px,-2px)
+
+@mixin sm()
+    margin: 0
+    padding: 0
+    display: flex
+    flex-flow: row wrap
+    list-style: none
+    li
+        font-size: 15px
+        &.email
+            a
+                span
+                    &:last-of-type
+                        display: none
+        &:last-of-type
+            &.email
+                font-size: 18px
+                a
+                    span
+                        &:first-of-type
+                            font-size: 15px
+                        &:last-of-type
+                            display: unset
+                            @include respond-below(md)
+                                display: none
+                
+

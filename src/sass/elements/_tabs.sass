@@ -1,0 +1,76 @@
+#enroll
+	display: flex
+	justify-content: space-between
+	flex-flow: column wrap
+	margin-top: 1em
+	select
+		&.mobileClassNav
+			display: none
+	ul
+		margin: 0
+		&.nav
+			display: grid
+			grid-template-columns: repeat(auto-fit, minmax(100px, 1fr))
+			list-style-type: none
+			border-bottom: 2px solid $dirk
+			li
+				text-align: center
+				border-radius: 8px 8px 0 0
+				&.active
+					border-bottom: 4px solid $sg-yellow
+					> a
+						color: $sg-blue
+		&.content
+			li
+				display: flex
+				flex-flow: column wrap
+				justify-content: center
+				align-items: space-between
+				h2
+					visibility: hidden
+					position: absolute
+					right: 1000px
+				section
+					.class-fp
+						display: grid
+						grid-template-columns: repeat(2, 1fr 2fr)
+						justify-items: center
+						margin-bottom: 1em
+						> div
+							text-align: center
+							place-self: center
+							//padding: 0.25em 2.5em
+							//width: 33%
+							&.thumbnail
+								img
+									max-width: 300px
+									width: 100%
+									height: auto
+							//&.date
+								p
+									&:first-of-type
+										text-transform: uppercase
+									&:last-of-type
+										font-variant: small-caps
+							&.buy
+								//a
+									max-width: 300px
+									//width: 100%
+									background-color: $sg-yellow
+									color: white
+									text-align: center
+									font-weight: bold
+									padding: 0.5em 3em
+									border-radius: 8px
+
+							p
+								margin-bottom: 0
+								&:last-of-type
+									margin-bottom: 0.5em
+						span
+							width: 2px
+							height: 40px
+							background:
+								color: $dirk
+						&::before
+							display: none

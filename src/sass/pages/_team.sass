@@ -1,0 +1,67 @@
+#meet-the-team
+	padding: 1em
+	.team
+		display: grid
+		grid-template-columns: repeat(auto-fill, minmax(150px, 1fr))
+		grid-gap: 1em
+		h2
+			grid-column: 1 / -1
+		.member
+			max-width: 200px
+			.front-row
+				img
+					filter: grayscale(0)
+					transition: all 300 ease
+					&:hover
+						cursor: pointer
+				.title
+					ul
+						margin: 0
+						padding: 0
+						display: flex
+						flex-flow: row wrap
+						justify-content: flex-start
+						list-style-type: none
+						li
+							font:
+								style: italic
+								size: 12px
+                                weight: bold
+							&::after
+								content: '//'
+								padding: 0 0.125em
+                                font-weight: bold
+							&:last-of-type
+								&::after
+									content: ''
+									padding-right: 0
+
+
+			.copy
+				display: none
+				.social-media
+					@include sm()
+			&.not-hovered
+				.front-row
+					img
+						filter: grayscale(95%)
+			&.active
+				max-width: 100%
+				width: 100%
+				grid-column: 1 / -1
+				grid-row-start: 2
+				display: flex
+				flex-flow: row nowrap
+				.front-row
+					padding-right: 16px
+					img
+						max-width: 175px
+						max-height: 175px
+					.title
+						ul
+							flex-direction: column
+							li
+								&::after
+									content: ''
+				.copy
+					display: block

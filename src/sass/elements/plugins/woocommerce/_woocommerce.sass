@@ -1,0 +1,38 @@
+&.woocommerce-page
+	a.button, .alt
+		font-size: 15px
+		line-height: 35px
+		padding: 0
+		border-radius: 0
+		color: $dirk
+		background-color: transparent
+
+
+	// .site
+	// 	#page-wrapper
+	// 		.main-container
+	// 			.main-grid
+	// 				.main-content
+	// 					.primary
+
+	//Product Page
+	@import 'single-product'
+
+	//Cart
+	@import 'cart'
+
+	//Check Out
+	@import 'checkout'
+
+	//Order Received
+	@import 'order-received'
+	.woocommerce #content table.cart td.actions .input-text,
+	.woocommerce table.cart td.actions .input-text,
+	.woocommerce-page #content table.cart td.actions .input-text,
+	.woocommerce-page table.cart td.actions .input-text
+		width: 180px
+
+	.post-content
+		div
+			&.coupons
+				margin-top: 0

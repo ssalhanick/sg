@@ -1,0 +1,40 @@
+&.page-template-enrolling
+    .site
+        #page-wrapper
+            .main-container
+                .main-grid
+                    .main-content
+                        .primary
+                            .content
+                                li
+                                    section
+                                        .class-fp	
+                                            display: grid
+                                            grid-template-columns: repeat(2, 1fr 2fr)
+                                            justify-items: center
+                                            margin-bottom: 1em
+                                            > div
+                                                text-align: center
+                                                place-self: center
+                                                &.thumbnail
+                                                    img
+                                                        max-width: 300px
+                                                        width: 100%
+                                                        height: auto
+                                                p
+                                                    margin-bottom: 0
+                                                    &:last-of-type
+                                                        margin-bottom: 0.5em
+                                            span
+                                                width: 2px
+                                                height: 40px
+                                                background-color: $dirk
+                                            &:before
+                                                display: none
+                                    @include respond-below(md)
+                                        section
+                                            display: grid
+                                            grid-template-columns: repeat(2, 1fr)
+                                            grid-gap: 16px
+                                            .class-fp
+                                                grid-template-columns: 1fr

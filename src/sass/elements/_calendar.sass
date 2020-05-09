@@ -1,0 +1,21 @@
+#calendar
+	padding-bottom: 0.1em
+	margin-bottom: 1em
+	border-bottom: 1px solid $dirk
+	//Tribe This Week (WILL BE NOW PLAYING CALENDAR)
+	.tribe-this-week-widget-wrapper
+		display: flex
+		flex-flow: column
+		h2
+			&.tribe-events-page-title
+				display: none
+		.tribe-events-sub-nav
+			order: 1
+		.tribe-this-week-widget-weekday-wrapper
+			display: grid
+			grid-template-columns: repeat(auto-fit, minmax(calc(650.125px/7),7fr))
+			.tribe-this-week-widget-day
+				width: auto
+				max-width: 100%
+				&.no-events
+					display: none

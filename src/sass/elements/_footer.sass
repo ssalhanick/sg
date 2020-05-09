@@ -1,0 +1,100 @@
+#footer-wrapper
+	a
+		color: $sg-yellow
+		
+	.footer-nav
+		display: grid
+		grid-gap: 1em
+		grid-template-columns: repeat(8, 1fr)
+		grid-template-rows: repeat(3, minmax(auto, 1fr))
+		grid-template-areas: "location location location contact contact contact links links" "location location location contact contact contact links links" "legal legal legal legal legal legal legal legal"
+		.footer-sidebar
+			width: auto
+			margin: 0
+			//background-color: #f3f3f3
+			padding: 1em
+			max-height: 45vh
+			&#map
+				grid-area: location
+				iframe
+					min-height: 300px
+			&#contact
+				grid-area: contact
+				max-height: calc(45vh/2)
+				form
+					border: 0px
+					background: none
+
+			&#links
+				grid-area: links
+				h2
+					margin: 0 0 0.25em 0
+					padding: 0 0 0.5em 0
+					border-bottom: 1px solid white
+					img
+						//filter: invert(1)
+				.menu
+					.menu-item
+						text-align: right
+				.social-media
+					@include sm()
+					justify-content: flex-end
+					
+			&#legal
+				grid-area: legal
+				.textwidget
+					p
+						color: white
+						font-size: 13px
+
+
+// @include respond-below(md)
+// 	#footer-wrapper
+// 		.footer-nav
+// 			.footer-sidebar
+// 				max-height: unset
+// 				&#map
+// 				&#contact
+// 					max-height: unset
+// 					form
+// 						label
+// 							grid-template-columns: 1fr
+// 							grid-template-areas: "firstName" "lastName" "email" "submit"
+// 							[type="submit"]
+// 								max-height: unset
+// 								background-color: $sg-blue
+// 								height: 45px
+// 								color: white
+// 								font-weight: bold
+// 				&#links
+// 				&#donate
+
+
+// @include respond-below(lg)
+// 	#footer-wrapper
+// 		.footer-nav
+// 			.footer-sidebar
+// 				max-height: unset
+// 				&#map
+// 				&#contact
+// 					max-height: unset
+// 					form
+// 						label
+// 							[type="submit"]
+// 								max-height: unset
+// 								background-color: $sg-blue
+// 								height: 45px
+// 								color: white
+// 								font-weight: bold
+// 				&#links
+// 				&#donate
+
+// 	#footer-wrapper
+// 		.footer-nav
+// 			.footer-sidebar
+// 				max-height: unset
+// 				&#map
+// 				&#contact
+// 					max-height: unset
+// 				&#links
+// 				&#donate

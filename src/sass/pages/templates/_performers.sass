@@ -1,0 +1,85 @@
+&.post-type-archive-performers
+	.site
+		#page-wrapper
+			.main-container
+				.main-grid
+					justify-content: center
+					.main-content
+						max-width: 1008px
+						display: flex
+						justify-content: space-between
+						.primary
+							width: 100%
+							#meet-the-team
+								padding: 1em
+								display: grid
+								grid-template-columns: repeat(auto-fill, minmax(150px, 1fr))
+								grid-gap: 1em
+								h1
+									grid-column: 1 / -1
+								.performer
+									max-width: 200px
+									.front-row
+										img
+											filter: grayscale(0)
+											transition: all 300 ease
+											&:hover
+												cursor: pointer
+										.teams
+											margin: 0
+											padding: 0
+											display: flex
+											flex-flow: row wrap
+											justify-content: flex-start
+											list-style-type: none
+											li
+												font:
+													style: italic
+													size: 11px
+												&::after
+													content: '//'
+													padding: 0 0.125em
+												&:last-of-type
+													&::after
+														content: ''
+														padding-right: 0
+
+
+									.copy
+										display: none
+										.social-media
+											@include sm()
+											// margin: 0
+											// padding: 0
+											// display: flex
+											// flex-flow: row wrap
+											// list-style: none
+											// li
+											// 	font-size: 10px
+									&.not-hovered
+										.front-row
+											img
+												filter: grayscale(95%)
+									&.active
+										max-width: 100%
+										width: 100%
+										grid-column: 1 / -1
+										grid-row-start: 2
+										display: flex
+										flex-flow: row nowrap
+										.front-row
+											padding-right: 16px
+											img
+												max-width: 175px
+											.title
+												ul
+													flex-direction: column
+													li
+														&::after
+															content: ''
+										.copy
+											display: block
+							@include respond-below(md)
+								.performer
+									&.active
+										flex-direction: column

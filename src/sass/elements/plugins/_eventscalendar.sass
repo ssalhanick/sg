@@ -1,0 +1,127 @@
+&.single-tribe_events
+	.main-content
+		margin: 0 auto
+		padding:  0 2em 2em
+		.primary
+			.hentry
+				.post-content
+					div
+						margin-top: 0
+					#tribe-events
+						#tribe-events-content
+							.content-header
+								display: grid
+								grid-template-columns: 4fr minmax(2fr, 300px)
+								grid-template-areas: "info image"
+								.content-inner
+									grid-area: info
+									margin-top: 0
+									align-self: end
+								.tribe-events-event-image
+									grid-area: image
+									margin-top: 0
+									justify-self: end
+							@include respond-below(lg)
+								.content-header
+									grid-template-columns: 4fr minmax(2fr, 200px)
+									.tribe-events-event-image
+										background-color: indianred
+							@include respond-below(md)
+								.content-header
+									grid-template-columns: 1fr
+									.tribe-events-event-image
+										display: none
+
+
+
+/* line 46, ../sass/3-plugins/eventscalendar.sass */	
+&.tribe_events-template-default
+	#page-wrapper
+		.main-container
+			.main-grid
+				.main-content
+					.primary
+						.hentry
+							.post-content
+								#tribe-events
+									#tribe-events-content
+										#tribe-block__tickets
+											padding-bottom: 25px
+											.tribe-block__tickets__buy
+												text-align: center
+												display: inline-block
+												min-width: 102px
+												width: auto
+												height: 34px
+												letter-spacing: 0.5px
+												line-height: 15px
+												background-color: transparent
+												color: $dirk
+												border-radius: 0px
+												padding: 10px 8px
+												font-weight: bold
+												font-size: 15px
+												text-transform: uppercase
+												margin: 6px
+												position: relative
+												transition: transform 0.3s ease-in-out
+												&:hover
+													transform: translate(2px, 2px)	
+													font-weigth: bold
+													color: $sg-blue
+												&:before,
+												&:after
+													content: ""	
+													border: 1px solid $sg-yellow
+													position: absolute	
+													width: 96%	
+													left: 0	
+													top: 0	
+													height: 91%	
+													transform: translate(0, 0)	
+													transition: transform 0.4s ease-in-out
+												&:before
+													border-color: $sg-blue
+												&:after
+													border-color: $sg-yellow
+													transform: translate(2px, 2px)
+													&:hover
+														transform: translate(-2px, -2px)
+
+#page-wrapper
+	.main-container
+		.main-grid
+			.main-content
+				.primary
+					.hentry
+						.post-content
+							#tribe-events
+								&.view-list
+									#tribe-events-content
+										.tribe-events-loop
+											display: grid	
+											grid-template-columns: repeat(auto-fit, minmax(250px, 1fr))	
+											grid-gap: 16px
+											div
+												&[id*="post-"]
+													display: flex	
+													flex-flow: column wrap
+													.tribe-events-event-image
+														float: unset	
+														width: 100%	
+														margin: 0 auto	
+														order: -1	
+													.tribe-events-event-meta
+														.recurringinfo
+															display: none
+													&.tribe-events-first
+														padding-top: 0
+													&:first-of-type
+														margin-top: 0
+											.tribe-event-featured
+												background-color: none!important
+												padding-top: 16px
+											.tribe-events-event-cost
+												span
+													background-color: $sg-blue
+													color: white

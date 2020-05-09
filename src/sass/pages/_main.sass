@@ -1,0 +1,131 @@
+body
+    font-family: $dosis!important
+    font-size: 16px!important
+    background:
+        color: $sg-blue
+        image: url(/wp-content/uploads/2018/08/tic-tac-toe.png)
+        repeat: repeat repeat
+        blend-mode: multiply
+        size: 20%
+    .site
+        #page-wrapper
+            #header
+                height: 10vh
+                background: unset
+                background-color: transparent
+                .row
+                    min-height: 70px
+                    height: 100%
+                    max-width: 100vw
+                    background-color: $sg-yellow
+                    justify-content: space-around
+                    .title-bar-left,
+                    .title-bar-right
+                        flex: unset
+                        display: flex
+                        align-items: center
+                    .title-bar-left
+                        padding-left: 0
+                        .logo
+                            img
+                                width: 150px
+                                filter: invert(1)
+                    .title-bar-right
+                        position: relative
+                        .title-bar
+                            nav
+                                .menu
+                                    @import '../elements/dropdown'
+                                    .menu-item
+                                        a
+                                            color: black
+                                            opacity: 1
+                                            &::after
+                                                border-top-color: black
+                                            &:hover
+                                                text-decoration: none
+
+                                        &:last-of-type
+                                            &:not(.is-dropdown-submenu-item)
+                                                margin-left: 2em
+                                                background-color: $sg-blue
+                                                border-radius: 5px
+                                                border: 2px solid $sg-blue
+                                                a
+                                                    color: white
+                                                    border-bottom: 0
+                                                    font-weight: 800
+                                                &:hover
+                                                    background-color: transparentize($sg-yellow, 0)
+                                                    a
+                                                        color: $sg-blue
+                        .cart
+                            position: relative
+            .main-container
+                .main-grid
+                    @import '../elements/slideshow'
+                    .main-content
+                        padding: 3em 2.5em 1.5em
+                        background-color: #ffffff
+                        max-width: 1008px
+                        width: 100%
+                        margin: 0 auto
+                        .primary
+                            padding: 10px 0 20px
+                            .hentry
+                                //CUSTOM STYLES IN CONTENT - WRAP STUFF IN AN ID'd SECTION FOR EASIER ACCESS
+                                .post-content
+                                    @import 'memberships'
+                                    @import 'show'
+                        @import 'team'
+                &#fp
+                    @import 'front'
+
+            @import '../elements/footer'
+
+    //PAGE TEMPLATE THEMES
+    &.page-template-page_slideshow,
+    &.page-template-page_fullwidth,
+    &.product-template-default
+        .site
+            #page-wrapper
+                .main-container
+                    .main-grid
+                        justify-content: center
+                        
+    @import 'templates/sidebar'
+    @import 'templates/performers'
+    @import 'templates/donors'
+    @import 'templates/enrolling'
+    @import 'templates/learn'
+    @import 'templates/blog'
+    @import '../elements/plugins/eventscalendar'
+    @import '../elements/plugins/woocommerce/woocommerce'
+
+// TO STYLE WEIRD OFF CANVAS WRAPPER THAT IS MOBILE NAV, BUT NOT CONTROLLED BY MEDIA QUERIES. IT IS JUST ALWAYS THERE, WHAT A WEIRD THEME.
+body
+	.site
+		#page-wrapper
+			.off-canvas-wrapper
+				.vertical-menu-header
+					padding: 0.5em
+					img
+						max-width: 150px
+						filter: invert(1)
+				.off-canvas-content
+					.row
+						.title-bar-left
+							.logo
+								display: flex
+								flex-flow: row wrap
+								justify-content: space-between
+								align-items: center
+								padding: 0 1em
+								@media #{$themeMobileNav}
+									width: 100vw
+
+
+//media query imports
+@import './media/phablet'
+@import './media/tablet'
+@import './media/desktop'
