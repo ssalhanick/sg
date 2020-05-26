@@ -132,29 +132,42 @@ h1, h2, h3, h4, h5, h6, p,
           transform: translate(-2px, -2px);
 }
 
-/* line 25, src/sass/components/_base.sass */
+/* line 24, src/sass/components/_base.sass */
+.wc-block-grid__product-add-to-cart {
+  background-color: transparent;
+  line-height: 0;
+  padding: 0;
+  padding-top: 4px;
+}
+
+/* line 29, src/sass/components/_base.sass */
+.wc-block-grid__product-add-to-cart a {
+  background-color: transparent;
+}
+
+/* line 32, src/sass/components/_base.sass */
 .woocommerce a.button.alt.checkout-button {
   width: auto;
   line-height: 0px;
 }
 
-/* line 30, src/sass/components/_base.sass */
+/* line 37, src/sass/components/_base.sass */
 .main-navigation ul {
   border-top: 0px;
   border-bottom: 0px;
 }
 
-/* line 34, src/sass/components/_base.sass */
+/* line 41, src/sass/components/_base.sass */
 .main-navigation ul li:first-of-type {
   border-top: 0px;
 }
 
-/* line 36, src/sass/components/_base.sass */
+/* line 43, src/sass/components/_base.sass */
 .main-navigation ul li:last-of-type {
   border-bottom: 0px;
 }
 
-/* line 39, src/sass/components/_base.sass */
+/* line 46, src/sass/components/_base.sass */
 h1 {
   font-size: 2.618em;
   font-weight: bold;
@@ -163,7 +176,7 @@ h1 {
           hyphens: none;
 }
 
-/* line 43, src/sass/components/_base.sass */
+/* line 50, src/sass/components/_base.sass */
 h2 {
   font-size: 1.931em;
   font-weight: bold;
@@ -172,7 +185,7 @@ h2 {
           hyphens: none;
 }
 
-/* line 47, src/sass/components/_base.sass */
+/* line 54, src/sass/components/_base.sass */
 h3 {
   font-size: 1.618em;
   font-weight: bold;
@@ -181,7 +194,7 @@ h3 {
           hyphens: none;
 }
 
-/* line 51, src/sass/components/_base.sass */
+/* line 58, src/sass/components/_base.sass */
 h4 {
   font-weight: 1.194em;
   -webkit-hyphens: none;
@@ -189,7 +202,7 @@ h4 {
           hyphens: none;
 }
 
-/* line 55, src/sass/components/_base.sass */
+/* line 62, src/sass/components/_base.sass */
 p {
   -webkit-hyphens: none;
       -ms-hyphens: none;
@@ -197,52 +210,52 @@ p {
   line-height: 1.325;
 }
 
-/* line 59, src/sass/components/_base.sass */
+/* line 66, src/sass/components/_base.sass */
 p.lead {
   font-size: 20px;
 }
 
-/* line 61, src/sass/components/_base.sass */
+/* line 68, src/sass/components/_base.sass */
 p.small {
   font-size: 13px;
 }
 
-/* line 65, src/sass/components/_base.sass */
+/* line 72, src/sass/components/_base.sass */
 .tribe-this-week-event {
   border-left: 4px solid #0E45DD !important;
 }
 
-/* line 68, src/sass/components/_base.sass */
+/* line 75, src/sass/components/_base.sass */
 a {
   color: #0E45DD;
 }
 
-/* line 70, src/sass/components/_base.sass */
+/* line 77, src/sass/components/_base.sass */
 a:hover {
   text-decoration: underline;
 }
 
-/* line 74, src/sass/components/_base.sass */
+/* line 81, src/sass/components/_base.sass */
 #tribe-events-content a {
   color: #0E45DD !important;
 }
 
-/* line 76, src/sass/components/_base.sass */
+/* line 83, src/sass/components/_base.sass */
 #tribe-events-content a:hover {
   text-decoration: underline !important;
 }
 
-/* line 81, src/sass/components/_base.sass */
+/* line 88, src/sass/components/_base.sass */
 .tribe-events-event-meta a {
   color: #0E45DD !important;
 }
 
-/* line 83, src/sass/components/_base.sass */
+/* line 90, src/sass/components/_base.sass */
 .tribe-events-event-meta a:hover {
   text-decoration: underline !important;
 }
 
-/* line 87, src/sass/components/_base.sass */
+/* line 94, src/sass/components/_base.sass */
 .thumbnail {
   border: 0px;
   -webkit-box-shadow: unset;
@@ -250,14 +263,14 @@ a:hover {
   margin: 0;
 }
 
-/* line 92, src/sass/components/_base.sass */
+/* line 99, src/sass/components/_base.sass */
 div.wpcf7-validation-errors,
 div.wpcf7-acceptance-missing {
   background-color: white;
   border: 0px;
 }
 
-/* line 102, src/sass/components/_base.sass */
+/* line 109, src/sass/components/_base.sass */
 .title-bar-right nav ul li a:hover {
   border-color: black;
 }
