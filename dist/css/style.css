@@ -1414,7 +1414,14 @@ body.page-template-page_donors #individuals .level:last-of-type .donors {
   column-gap: 16px;
 }
 
-/* line 11, src/sass/pages/templates/_enrolling.sass */
+/* line 8, src/sass/pages/templates/_enrolling.sass */
+body.page-template-enrolling .site #page-wrapper .main-container .main-grid .main-content .primary .content {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* line 14, src/sass/pages/templates/_enrolling.sass */
 body.page-template-enrolling .site #page-wrapper .main-container .main-grid .main-content .primary .content li section .class-fp {
   display: -ms-grid;
   display: grid;
@@ -1424,7 +1431,7 @@ body.page-template-enrolling .site #page-wrapper .main-container .main-grid .mai
   margin-bottom: 1em;
 }
 
-/* line 16, src/sass/pages/templates/_enrolling.sass */
+/* line 19, src/sass/pages/templates/_enrolling.sass */
 body.page-template-enrolling .site #page-wrapper .main-container .main-grid .main-content .primary .content li section .class-fp > div {
   text-align: center;
   -ms-grid-row-align: center;
@@ -1432,37 +1439,37 @@ body.page-template-enrolling .site #page-wrapper .main-container .main-grid .mai
   place-self: center;
 }
 
-/* line 20, src/sass/pages/templates/_enrolling.sass */
+/* line 23, src/sass/pages/templates/_enrolling.sass */
 body.page-template-enrolling .site #page-wrapper .main-container .main-grid .main-content .primary .content li section .class-fp > div.thumbnail img {
   max-width: 300px;
   width: 100%;
   height: auto;
 }
 
-/* line 24, src/sass/pages/templates/_enrolling.sass */
+/* line 27, src/sass/pages/templates/_enrolling.sass */
 body.page-template-enrolling .site #page-wrapper .main-container .main-grid .main-content .primary .content li section .class-fp > div p {
   margin-bottom: 0;
 }
 
-/* line 26, src/sass/pages/templates/_enrolling.sass */
+/* line 29, src/sass/pages/templates/_enrolling.sass */
 body.page-template-enrolling .site #page-wrapper .main-container .main-grid .main-content .primary .content li section .class-fp > div p:last-of-type {
   margin-bottom: 0.5em;
 }
 
-/* line 28, src/sass/pages/templates/_enrolling.sass */
+/* line 31, src/sass/pages/templates/_enrolling.sass */
 body.page-template-enrolling .site #page-wrapper .main-container .main-grid .main-content .primary .content li section .class-fp span {
   width: 2px;
   height: 40px;
   background-color: #414141;
 }
 
-/* line 32, src/sass/pages/templates/_enrolling.sass */
+/* line 35, src/sass/pages/templates/_enrolling.sass */
 body.page-template-enrolling .site #page-wrapper .main-container .main-grid .main-content .primary .content li section .class-fp:before {
   display: none;
 }
 
 @media (max-width: 991px) {
-  /* line 35, src/sass/pages/templates/_enrolling.sass */
+  /* line 38, src/sass/pages/templates/_enrolling.sass */
   body.page-template-enrolling .site #page-wrapper .main-container .main-grid .main-content .primary .content li section {
     display: -ms-grid;
     display: grid;
@@ -1470,7 +1477,7 @@ body.page-template-enrolling .site #page-wrapper .main-container .main-grid .mai
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 16px;
   }
-  /* line 39, src/sass/pages/templates/_enrolling.sass */
+  /* line 42, src/sass/pages/templates/_enrolling.sass */
   body.page-template-enrolling .site #page-wrapper .main-container .main-grid .main-content .primary .content li section .class-fp {
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
